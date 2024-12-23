@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 export const App: FC = () => {
-  return <p>Hello there!</p>;
+  return <p className="hello">Hello there!</p>;
 };
 
 export default App;
