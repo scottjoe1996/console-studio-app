@@ -23,7 +23,7 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+      'quotes': ['error', 'single', { allowTemplateLiterals: true }, { avoidEscape: true }]
     },
   },
 )
