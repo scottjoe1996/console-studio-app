@@ -2,13 +2,18 @@ import { FC } from 'react';
 
 import consoleSvg from './console.svg';
 
-export const Console: FC = () => {
+interface ConsoleProps {
+  width: string | number;
+  height: string | number;
+}
+
+export const Console: FC<ConsoleProps> = ({ width, height }) => {
   return (
     <div
       style={{
-        width: 500,
-        height: 500,
-        borderRadius: 5,
+        width,
+        height,
+        borderRadius: 8,
         backgroundImage: `url("${consoleSvg}")`,
         backgroundOrigin: 'border-box',
         backgroundRepeat: 'no-repeat',
