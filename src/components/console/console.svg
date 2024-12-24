@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
     <defs>
         <path id="screen" d="M 4 5 Q 4 4 5 4 Q 50 2 95 4 Q 96 4 96 5 Q 98 50 96 95 Q 96 96 95 96 Q 50 98 5 96 Q 4 96 4 95 Q 2 50 4 5 Z" />
+         <radialGradient r="75%" id="screenHue">
+            <stop offset="0%" stop-color="#009600bf" />
+            <stop offset="100%" stop-color="black" />
+        </radialGradient>
     </defs>
     <rect name="consoleBorder" height="100" width="100" fill="#a2bd8f" />
     <use name="screenIndent" xlink:href="#screen"  fill="#87aa6e" />
-    <use name="screenContent" xlink:href="#screen" fill="green"  transform="scale(0.98) translate(1 1)"/>
+    <use name="screenContent" xlink:href="#screen" fill="url(#screenHue)"  transform="scale(0.98) translate(1 1)"/>
 </svg>
