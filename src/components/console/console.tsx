@@ -21,7 +21,15 @@ export const Console: FC<ConsoleProps> = ({ width, height }) => {
         padding: '2% 4%',
       }}
     >
-      <p>hello there!</p>
+      <p
+        style={{
+          color: 'white',
+          font: '1.3rem Inconsolata, monospace',
+          textShadow: '0 0 5px #C8C8C8',
+        }}
+      >
+        hello there!
+      </p>
     </div>
   );
 };
