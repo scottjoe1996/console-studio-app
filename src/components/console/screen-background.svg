@@ -5,15 +5,11 @@
             <stop offset="0%" stop-color="#009600bf" />
             <stop offset="100%" stop-color="black" />
         </radialGradient>
-        <filter id="screenGlow">
-            <feDropShadow dx="0" dy="0" stdDeviation="1" flood-color="#89FF62" />
-        </filter>
         <pattern id="screenLines" width="0.01" height="1"  patternTransform="rotate(90)">
             <line stroke="black" opacity="0.15" stroke-width="1px" y2="100" />
         </pattern>
     </defs>
     <rect name="consoleBorder" height="100" width="100" fill="#a2bd8f" />
     <use name="screenIndent" xlink:href="#screen"  fill="#87aa6e"  />
-    <use name="screenContent" xlink:href="#screen" fill="url(#screenHue)" filter="url(#screenGlow)" transform="scale(0.98) translate(1 1)" />
-    <use name="screenLines" xlink:href="#screen" fill="url(#screenLines)" transform="scale(0.98) translate(1 1)"/>
+    <use name="screenContent" xlink:href="#screen" fill="url(#screenHue)" transform="scale(0.98) translate(1 1)" />
 </svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+    <defs>
+        <path id="screen" d="M 4 5 Q 4 4 5 4 Q 50 2 95 4 Q 96 4 96 5 Q 98 50 96 95 Q 96 96 95 96 Q 50 98 5 96 Q 4 96 4 95 Q 2 50 4 5 Z" />
+        <pattern id="screenLines" width="0.01" height="1"  patternTransform="rotate(90)">
+            <line stroke="black" opacity="0.15" stroke-width="1px" y2="100" />
+        </pattern>
+    </defs>
+    <use name="screenLines" xlink:href="#screen" fill="url(#screenLines)" transform="scale(0.98) translate(1 1)"/>
+</svg>

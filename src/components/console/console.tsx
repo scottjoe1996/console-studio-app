@@ -1,6 +1,7 @@
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 
-import consoleSvg from './console.svg';
+import screenBackgroundSvg from './screen-background.svg';
+import screenOverlay from './screen-overlay.svg';
 
 interface ConsoleProps {
   width: string | number;
@@ -8,16 +9,21 @@ interface ConsoleProps {
 }
 
 export const Console: FC<ConsoleProps> = ({ width, height }) => {
+  const commonScreenStyling: CSSProperties = {
+    width,
+    height,
+    borderRadius: 8,
+    backgroundOrigin: 'border-box',
+    backgroundRepeat: 'no-repeat',
+    boxSizing: 'border-box',
+  };
+
   return (
     <div
       style={{
-        width,
-        height,
-        borderRadius: 8,
-        backgroundImage: `url("${consoleSvg}")`,
-        backgroundOrigin: 'border-box',
-        backgroundRepeat: 'no-repeat',
-        boxSizing: 'border-box',
+        ...commonScreenStyling,
+        position: 'relative',
+        backgroundImage: `url("${screenBackgroundSvg}")`,
         padding: '2% 4%',
       }}
     >
@@ -30,6 +36,15 @@ export const Console: FC<ConsoleProps> = ({ width, height }) => {
       >
         hello there!
       </p>
+      <div
+        style={{
+          ...commonScreenStyling,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          backgroundImage: `url("${screenOverlay}")`,
+        }}
+      />
     </div>
   );
 };
