@@ -4,14 +4,13 @@ import screenBackgroundSvg from './screen-background.svg';
 import screenOverlay from './screen-overlay.svg';
 
 interface ConsoleProps {
-  width: string | number;
-  height: string | number;
+  size: number;
 }
 
-export const Console: FC<ConsoleProps> = ({ width, height }) => {
+export const Console: FC<ConsoleProps> = ({ size }) => {
   const commonScreenStyling: CSSProperties = {
-    width,
-    height,
+    width: size,
+    height: size,
     borderRadius: 8,
     backgroundOrigin: 'border-box',
     backgroundRepeat: 'no-repeat',
@@ -24,18 +23,23 @@ export const Console: FC<ConsoleProps> = ({ width, height }) => {
         ...commonScreenStyling,
         position: 'relative',
         backgroundImage: `url("${screenBackgroundSvg}")`,
-        padding: '2% 4%',
       }}
     >
-      <p
+      <div
         style={{
-          color: 'white',
-          font: '1.3rem Inconsolata, monospace',
-          textShadow: '0 0 5px #C8C8C8',
+          padding: '4.5% 7%',
         }}
       >
-        hello there!
-      </p>
+        <p
+          style={{
+            color: 'white',
+            font: '1.3rem Inconsolata, monospace',
+            textShadow: '0 0 5px #C8C8C8',
+          }}
+        >
+          hello there!
+        </p>
+      </div>
       <div
         style={{
           ...commonScreenStyling,
