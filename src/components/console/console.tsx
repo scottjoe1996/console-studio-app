@@ -2,6 +2,7 @@ import { CSSProperties, FC } from 'react';
 
 import screenBackgroundSvg from './screen-background.svg';
 import screenOverlay from './screen-overlay.svg';
+import { ConsoleInput } from './console-input';
 
 interface ConsoleProps {
   size: number;
@@ -30,15 +31,7 @@ export const Console: FC<ConsoleProps> = ({ size }) => {
           padding: '4.5% 7%',
         }}
       >
-        <p
-          style={{
-            color: 'white',
-            font: '1.3rem Inconsolata, monospace',
-            textShadow: '0 0 5px #C8C8C8',
-          }}
-        >
-          hello there!
-        </p>
+        <ConsoleInput />
       </div>
       <div
         style={{
