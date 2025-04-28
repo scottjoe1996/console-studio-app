@@ -1,5 +1,5 @@
 import React from 'react';
-import blinkingCaret from './blinking-caret.svg';
+import blinkingCaret from './assets/blinking-caret.svg';
 
 export const ConsoleInput: React.FC = () => {
   return (

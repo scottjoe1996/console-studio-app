@@ -1,7 +1,7 @@
 import { CSSProperties, FC } from 'react';
 
-import screenBackgroundSvg from './screen-background.svg';
-import screenOverlay from './screen-overlay.svg';
+import screenBackgroundSvg from './assets/screen-background.svg';
+import screenOverlay from './assets/screen-overlay.svg';
 import { ConsoleInput } from './console-input';
 
 interface ConsoleProps {
