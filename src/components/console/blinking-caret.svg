@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 66 100">
+    <defs>
+        <filter id="dropShadow" filterUnits="userSpaceOnUse" x="0" y="0" height="100" width="100">
+            <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#C8C8C8" />
+        </filter>
+    </defs>
+    <rect id="caret" x="15" y="12" width="36" height="76"  fill="#FFFFFF" filter="url(#dropShadow)">
+        <animate attributeName="opacity" dur="1.5" values="0;1" calcMode="discrete" repeatCount="indefinite"/>
+    </rect>
+</svg>
